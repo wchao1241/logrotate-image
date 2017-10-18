@@ -1,0 +1,11 @@
+/var/lib/docker/containers/*/*.log
+/var/log/messages
+{
+    {{LOGROTATE_MODE}}
+    missingok
+    rotate {{LOGROTATE_ROTATE}}
+    nocompress
+    notifempty
+    copytruncate
+#    compress
+}
