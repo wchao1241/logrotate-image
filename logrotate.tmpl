@@ -1,6 +1,19 @@
+#/var/lib/docker/containers/*/*.log
+#/var/log/messages
+#{
+#    {{LOGROTATE_MODE}}
+#    missingok
+#    rotate {{LOGROTATE_ROTATE}}   
+#    notifempty
+#	size 500M
+##	copytruncate
+##	nocompress
+##    compress
+#}
+
+
 /var/lib/docker/containers/*/*.log
 /var/log/messages
-/var/log/messages-*
 {
     {{LOGROTATE_MODE}}
     missingok
